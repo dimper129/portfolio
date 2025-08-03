@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Dimper, showcasing web development projects, skills, and contact information">
+    <title> Dimper | Web Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header role="banner">
+        <button class="hamburger" aria-label="Toggle menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Dimper</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <main>
+        <section id="about-me" aria-labelledby="about-heading">
+            <div class="container">
+                <h2 id="about-heading">About Me</h2>
+                <figure>
+                    <img src="profile.jpg" alt="Dimper smiling at the camera" width="300">
+                </figure>
+                <p>Hello! I'm Dimper, a passionate web developer with expertise in front-end technologies. I specialize in creating accessible, responsive websites with clean, efficient code. With 5 years of experience, I love turning complex problems into simple, beautiful solutions.</p>
+                <p>When I'm not coding, you can find me hiking, painting, or reading science fiction novels.</p>
+            </div>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading">Projects</h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+                    <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+                    <button class="filter-btn" onclick="filterProjects('mobile')">Mobile</button>
+                    <button class="filter-btn" onclick="filterProjects('design')">Design</button>
+                </div>
+                
+                <div class="projects-container">
+                    <article data-categories="web design">
+                        <h3>E-Commerce Website</h3>
+                        <figure>
+                            <img src="ecommerce-screenshot.jpg" alt="Screenshot of e-commerce website showing product listings">
+                            <figcaption>Modern e-commerce platform with React</figcaption>
+                        </figure>
+                        <p>A full-featured online store built with React, Node.js, and MongoDB. Features include product filtering, cart functionality, and secure checkout.</p>
+                        <a href="#" aria-label="View E-Commerce Website project details">View Project</a>
+                    </article>
+                    
+                    <article data-categories="mobile">
+                        <h3>Task Management App</h3>
+                        <figure>
+                            <img src="task-app-screenshot.jpg" alt="Interface of task management application showing to-do list">
+                            <figcaption>Productivity application with drag-and-drop functionality</figcaption>
+                        </figure>
+                        <p>An intuitive task manager built with Vue.js that allows users to organize, prioritize, and track their daily tasks with drag-and-drop functionality.</p>
+                        <a href="#" aria-label="View Task Management App project details">View Project</a>
+                    </article>
+
+                    <article data-categories="web">
+                        <h3>Portfolio Template</h3>
+                        <figure>
+                            <img src="portfolio.jpg" alt="Screenshot of portfolio website template">
+                            <figcaption>Responsive portfolio template</figcaption>
+                        </figure>
+                        <p>A customizable portfolio template built with HTML5, CSS3, and JavaScript that showcases projects and skills with clean animations.</p>
+                        <a href="#" aria-label="View Portfolio Template project details">View Project</a>
+                    </article>
+
+                    <article data-categories="design">
+                        <h3>UI Kit Design</h3>
+                        <figure>
+                            <img src="uikit.jpg" alt="Collection of UI design components">
+                            <figcaption>Design system for web applications</figcaption>
+                        </figure>
+                        <p>A comprehensive UI kit with reusable components, typography styles, and color schemes for consistent application design.</p>
+                        <a href="#" aria-label="View UI Kit Design project details">View Project</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <div class="container">
+                <h2 id="skills-heading">Skills</h2>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React & Vue.js</li>
+                    <li>Node.js & Express</li>
+                    <li>Responsive Design</li>
+                    <li>Accessibility (WCAG)</li>
+                    <li>Git & GitHub</li>
+                    <li>UI/UX Principles</li>
+                    <li>Figma & Adobe XD</li>
+                    <li>Python</li>
+                    <li>SQL Databases</li>
+                    <li>RESTful APIs</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <h2 id="contact-heading">Get In Touch</h2>
+                <form id="contact-form" aria-labelledby="contact-heading">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Dimper. All rights reserved.</p>
+            <ul>
+                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
